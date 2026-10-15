@@ -1,0 +1,937 @@
+
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f8fafc;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#branding img {
+    object-fit: contain;
+}
+
+#branding h1 {
+    font-size: 21px;
+    color: #172554;
+}
+
+.highlight {
+    color: #2563eb;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+    padding: 9px 15px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .current a {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+#showcase {
+    min-height: 570px;
+
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.72),
+            rgba(15, 23, 42, 0.72)
+        ),
+        url("../img/stationery-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.showcase-content {
+    display: flex;
+    align-items: center;
+}
+
+.showcase-text {
+    max-width: 650px;
+    color: white;
+}
+
+.small-heading {
+    color: #93c5fd;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.showcase-text h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.showcase-text h1 span {
+    display: block;
+    color: #60a5fa;
+}
+
+.showcase-text > p:not(.small-heading) {
+    font-size: 18px;
+    color: #e5e7eb;
+    max-width: 600px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: white;
+    color: #2563eb;
+}
+
+.secondary-button:hover {
+    background: #eff6ff;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: #172554;
+}
+
+
+/* =========================
+   PRODUCT CATEGORIES
+========================= */
+
+#categories {
+    padding: 80px 0;
+    background: white;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    max-width: 150px;
+    max-height: 160px;
+    object-fit: contain;
+}
+
+.box h3 {
+    color: #172554;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.box p {
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.box a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================
+   WHY US
+========================= */
+
+#why-us {
+    padding: 80px 0;
+    background: #f1f5f9;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #64748b;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+#cta {
+    padding: 80px 20px;
+    text-align: center;
+    background: #172554;
+    color: white;
+}
+
+#cta h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#cta p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+footer p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.copyright {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #branding h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #showcase {
+        min-height: 600px;
+        text-align: center;
+    }
+
+    .showcase-text h1 {
+        font-size: 40px;
+    }
+
+    .showcase-text > p:not(.small-heading) {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    #cta h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    #branding {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #showcase {
+        min-height: 650px;
+    }
+
+    .showcase-text h1 {
+        font-size: 34px;
+    }
+
+    .showcase-text > p:not(.small-heading) {
+        font-size: 15px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+
+
+css
+/* =========================
+   ABOUT PAGE HERO
+========================= */
+
+.page-hero {
+    padding: 90px 20px;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.85),
+            rgba(15, 23, 42, 0.85)
+        ),
+        url("../img/stationery-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    margin: 10px 0 15px;
+}
+
+.page-hero > p:last-child {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+
+/* =========================
+   ABOUT STORY
+========================= */
+
+.about-section {
+    padding: 90px 0;
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-content .section-label {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    color: #172554;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   MISSION
+========================= */
+
+.mission-section {
+    padding: 80px 0;
+    background: #f1f5f9;
+}
+
+.mission-card {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mission-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mission-card h3 {
+    color: #172554;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* =========================
+   VALUES
+========================= */
+
+.values-section {
+    padding: 90px 0;
+    background: white;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.value-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.value-card h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* =========================
+   ABOUT MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .page-hero {
+        padding: 70px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-hero h1 {
+        font-size: 30px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-card {
+        padding: 30px 20px;
+    }
+
+}
+
+
+
+css
+/* =========================
+   SERVICES PAGE
+========================= */
+
+.services-hero {
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.85),
+            rgba(15, 23, 42, 0.85)
+        ),
+        url("../img/stationery-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+#products {
+    padding: 90px 0;
+    background: #f8fafc;
+}
+
+#products .section-heading span {
+    display: block;
+    max-width: 600px;
+    margin: 10px auto 0;
+    color: #64748b;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    height: 230px;
+    background: #f1f5f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.product-image img {
+    max-width: 170px;
+    max-height: 190px;
+    object-fit: contain;
+}
+
+.placeholder-icon {
+    font-size: 70px;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-category {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #2563eb;
+}
+
+.product-info h3 {
+    color: #172554;
+    font-size: 22px;
+    margin: 8px 0 10px;
+}
+
+.product-info p {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid #e5e7eb;
+    padding-top: 18px;
+}
+
+.product-bottom strong {
+    color: #16a34a;
+    font-size: 14px;
+}
+
+.product-bottom a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    padding: 90px 0;
+    background: white;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 35px 25px;
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: #dbeafe;
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+.service-card h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #64748b;
+}
+
+
+/* =========================
+   CONTACT CTA
+========================= */
+
+#contact {
+    padding: 70px 0;
+    background: #172554;
+    color: white;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-box h2 {
+    font-size: 32px;
+    margin: 8px 0 10px;
+    max-width: 650px;
+}
+
+.contact-box p:not(.small-heading) {
+    color: #cbd5e1;
+}
+
+.contact-box .button {
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   SERVICES MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .contact-box h2 {
+        font-size: 26px;
+    }
+
+}
